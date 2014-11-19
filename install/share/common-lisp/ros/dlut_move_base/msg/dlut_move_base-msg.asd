@@ -1,0 +1,21 @@
+
+(cl:in-package :asdf)
+
+(defsystem "dlut_move_base-msg"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils )
+  :components ((:file "_package")
+    (:file "Vector3" :depends-on ("_package_Vector3"))
+    (:file "_package_Vector3" :depends-on ("_package"))
+    (:file "Pose" :depends-on ("_package_Pose"))
+    (:file "_package_Pose" :depends-on ("_package"))
+    (:file "Color" :depends-on ("_package_Color"))
+    (:file "_package_Color" :depends-on ("_package"))
+    (:file "Velocity" :depends-on ("_package_Velocity"))
+    (:file "_package_Velocity" :depends-on ("_package"))
+    (:file "Height" :depends-on ("_package_Height"))
+    (:file "_package_Height" :depends-on ("_package"))
+    (:file "Laser" :depends-on ("_package_Laser"))
+    (:file "_package_Laser" :depends-on ("_package"))
+    (:file "Twist" :depends-on ("_package_Twist"))
+    (:file "_package_Twist" :depends-on ("_package"))
+  ))
